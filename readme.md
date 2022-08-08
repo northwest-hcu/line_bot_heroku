@@ -31,9 +31,32 @@
 * If your heroku account is set 2-step verification, you can't login with -i option. Be careful.
 
 ## 3. Set up Work directory
+
 ### 1. On Console, move to your directory you want to work by `cd` command.
 ### 2. Execute `git init` to initialize work derectory.
 ### 3. Execute `heroku create <your app name>`. <your app name> is like `example-app`.
 ### 4. Execute `heroku git:remote -a <your app name>`.
-### 5. Execute `git `
+### 5. Execute `heroku config:set CHANNEL_ACCESS_TOKEN="<your line bot channel access token>"` to set channel access token as enviroment argument. (Not need <>, but need "")
+### 6. Execute `heroku config:set CHANNEL_ACCESS_TOKEN="<your line bot channel secret>"` to set channel secret as enviroment argument. (Not need <>, but need "")
+
+## 4. Copied files from this repository.
+
+### 1. Execute `curl https://raw.githubusercontent.com/northwest-hcu/line_bot_heroku/main/Procfile > Procfile` to copy `Procfile`.
+### 2. Execute `curl https://raw.githubusercontent.com/northwest-hcu/line_bot_heroku/main/main.py > main.py` to copy `main.py`.
+### 3. Execute `curl https://raw.githubusercontent.com/northwest-hcu/line_bot_heroku/main/requirements.txt` to copy `requirements.txt`.
+### 4. Execute `curl https://raw.githubusercontent.com/northwest-hcu/line_bot_heroku/main/runtime.txt` to copy `runtime.txt`.
+### 5. Execute `git add .`
+### 6. Execute `git commit -am "copied from northwest-hcu"`
+### 7. Execute `git push heroku master`
+### 8. Execute `heroku ps:scale web=1` to set up
+
+## 5. Setup callback URL.
+### 1. Back to your LINE developper account page. and go Messaging API Tab.
+### 2. In Webhook settings, Edit Webhook URL to `https://<your app name>.herokuapp.com/callback`. and Update.
+### 3. This process was sucesss, set up is end. But if `Verify` has error, you have some bugs. Please execute `heroku logs --tail` to check problems. 
+
+##6. Check Access.
+### 1. Execute `heroku open`, if you can show `check1`, maybe bot is working correctly.
+### 2. Try add bot from QRcode and send message. You may get message(`テキストを受け取りました.`). 
+
 
