@@ -34,7 +34,8 @@
 
 ### 1. On Console, move to your directory you want to work by `cd` command.
 ### 2. Execute `git init` to initialize work derectory.
-### 3. Execute `heroku create <your app name>`. <your app name> is like `example-app`.
+### 3. Execute `heroku create <your app name>`. 
+* <your app name> is like `example-app`.
 ### 4. Execute `heroku git:remote -a <your app name>`.
 ### 5. Execute `heroku config:set CHANNEL_ACCESS_TOKEN="<your line bot channel access token>"` to set channel access token as enviroment argument. (Not need <>, but need "")
 ### 6. Execute `heroku config:set CHANNEL_ACCESS_TOKEN="<your line bot channel secret>"` to set channel secret as enviroment argument. (Not need <>, but need "")
@@ -53,6 +54,7 @@
 ## 5. Setup callback URL.
 ### 1. Back to your LINE developper account page. and go Messaging API Tab.
 ### 2. In Webhook settings, Edit Webhook URL to `https://<your app name>.herokuapp.com/callback`. and Update.
+* <your app name> is like `example-app`.
 ### 3. This process was sucesss, set up is end. But if `Verify` has error, you have some bugs. Please execute `heroku logs --tail` to check problems. 
 
 ## 6. Check Access.
