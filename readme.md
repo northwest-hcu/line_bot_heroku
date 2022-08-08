@@ -55,7 +55,7 @@
 ### 2. In Webhook settings, Edit Webhook URL to `https://<your app name>.herokuapp.com/callback`. and Update.
 ### 3. This process was sucesss, set up is end. But if `Verify` has error, you have some bugs. Please execute `heroku logs --tail` to check problems. 
 
-##6. Check Access.
+## 6. Check Access.
 ### 1. Execute `heroku open`, if you can show `check1`, maybe bot is working correctly.
 ### 2. Try add bot from QRcode and send message. You may get message(`テキストを受け取りました.`). 
 
